@@ -12,7 +12,7 @@ echo "=== 2. Building consumer static application ==="
 mkdir -p "${TARGET_DIR}"
 (
   cd examples/static_app
-  CGO_ENABLED=1 go build -ldflags="-linkmode external -extldflags '-static -s -w'" -o "../../${BINARY_PATH}" .
+  GOWORK=off CGO_ENABLED=1 go build -ldflags="-linkmode external -extldflags '-static -s -w'" -o "../../${BINARY_PATH}" .
 )
 
 echo ""
