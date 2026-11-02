@@ -1,0 +1,23 @@
+# Build artifacts
+target/
+examples/static_app/static_app
+examples/static_app/static-app
+
+# Test and profiling artifacts
+*.test
+*.out
+*.prof
+
+# IDE and OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Ensure bundled static archive and model fixtures are tracked
+!lib/linux_amd64/libtensorflowlite_c_all.a
+!testdata/*.bin
+!examples/static_app/add.bin
